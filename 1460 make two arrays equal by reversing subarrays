@@ -1,0 +1,14 @@
+class Solution {
+public:
+    bool canBeEqual(vector<int>& target, vector<int>& arr) {
+        vector<int> c1(1001);
+        vector<int> c2(1001);
+        for(auto& v:target){
+            ++c1[v];
+        }
+        for(auto& v: arr){
+            ++c2[v];
+        }
+        return c1==c2;
+    }
+};
